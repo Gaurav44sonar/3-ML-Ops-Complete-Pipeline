@@ -47,6 +47,7 @@ def load_params(params_path: str) -> dict:
         logger.error('Unexpected error: %s', e)
         raise
 
+
 def load_model(file_path: str):
     """Load the trained model from a file."""
     try:
@@ -73,6 +74,8 @@ def load_data(file_path: str) -> pd.DataFrame:
     except Exception as e:
         logger.error('Unexpected error occurred while loading the data: %s', e)
         raise
+
+
 
 def evaluate_model(clf, X_test: np.ndarray, y_test: np.ndarray) -> dict:
     """Evaluate the model and return the evaluation metrics."""
